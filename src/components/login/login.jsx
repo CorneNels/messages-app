@@ -4,7 +4,7 @@ const Header = () => (
     <header>
         <div className={style.container}>
             <div className={style.title}>
-                <h1>MESSAGES APP: test</h1>
+                <h2>MESSAGES APP: test</h2>
             </div>
             <div className={style.body}>
                 <form>
