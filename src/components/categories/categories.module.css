@@ -11,13 +11,21 @@
     justify-content: center;
     width: 500px;
     display: flex;
+    color: whitesmoke;
+    background-color: purple;
 }
 
 .table{
     border: 1px solid black;
-    width: 500px
+    width: 500px;
+    line-height: 25px;
 }
 
 .space{
     text-align: left;
+    border: 1px solid black;
+}
+
+.under{
+    text-decoration: underline;
 }
