@@ -1,19 +1,42 @@
-const cat = [
-    {name : "Sciences", messagesNumber : 22},
-    {name : "Sport", messagesNumber : },
-    {name : "Math", messagesNumber : },
-    {name : , messagesNumber : },
+import style from "./categories.module.css"
 
-]
+const CategoriesHead = () => (
+    <thead>
+        <tr>
+            <th>Noms :</th>
+            <th>Messages :</th>
+        </tr>
+    </thead>
+)
 
-const Categorie = ({cat}) => {
+const CategoriesRow = ({nom, messagesNumber}) => (
+    <tr>
+        <td>{nom}</td>
+        <td>{messagesNumber}</td>
+    </tr>
+)
 
-    const category = cat.map(
-        categories => 
+const Categorie = ({data}) => {
+
+    const category = data.map(
+        list_cat => <CategoriesRow {...list_cat} key={list_cat.id} />
     )
 
     return(
-
+        <div className={style.container}>
+        <div className={style.title}>
+            <h2>Liste des catégories</h2>
+        </div>
+            <table>
+                <CategoriesHead />
+                <tbody>
+                    {category}
+                </tbody>
+            </table>
+        </div>
     )
-
 }
+
+
+
+export default Categorie
