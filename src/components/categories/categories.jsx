@@ -2,17 +2,19 @@ import style from "./categories.module.css"
 
 const CategoriesHead = () => (
     <thead>
-        <tr>
+        <tr className={style.space}>
             <th>Noms :</th>
             <th>Messages :</th>
+            <th>Last Up :</th>
         </tr>
     </thead>
 )
 
-const CategoriesRow = ({nom, messagesNumber}) => (
-    <tr>
+const CategoriesRow = ({nom, nb, lastUpdate}) => (
+    <tr className={style.space}>
         <td>{nom}</td>
-        <td>{messagesNumber}</td>
+        <td>{nb}</td>
+        <td>{lastUpdate}</td>
     </tr>
 )
 
@@ -27,7 +29,7 @@ const Categorie = ({data}) => {
         <div className={style.title}>
             <h2>Liste des catégories</h2>
         </div>
-            <table>
+            <table className={style.table}>
                 <CategoriesHead />
                 <tbody>
                     {category}

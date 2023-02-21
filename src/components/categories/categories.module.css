@@ -1,3 +1,23 @@
-.cointainer{
-    
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    display: flex;
+}
+
+.table{
+    border: 1px solid black;
+    width: 500px
+}
+
+.space{
+    text-align: left;
 }
