@@ -1,8 +1,8 @@
-import Header from './components/login/login';
+import Login from './components/login/login';
 
 function App() {
   return (
-    <Header/>
+    <Login/>
 
   )
 }
