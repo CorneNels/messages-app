@@ -1,18 +1,23 @@
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import { useId, useState } from "react"
 import style from "./login.module.css"
+
+
 
 const Login = () => {
 
     const id = useId();
     const [loginId, setLoginId] = useState(" ");
 
+    const [loginList, setLoginList] = useState([])
+    const currentLogin = " "
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log("My login is: " + loginId)
-
+        setLoginList(loginList => [...loginList, loginId]); // J'ajoute les valeurs de mon tableau + la dernière
+        const currentLogin = loginId
+        console.log("Current id : " + currentLogin)
+        console.log(loginList)
     }
 
     return (
@@ -21,6 +26,7 @@ const Login = () => {
                 <div className={style.title}>
                     <h2>MESSAGES APP</h2>
                     <h3>Welcome ! Choose a login first</h3>
+                    <p>You're current login id is : {loginId}</p>
                 </div>
                 <div className={style.loginForm}>
                     <form onSubmit={handleSubmit}>
@@ -35,7 +41,8 @@ const Login = () => {
 }
 
 Login.defaultProps = {
-    loginList: []
+    loginList: [],
+    currentLogin: PropTypes.string
 }
 
 export default Login;
