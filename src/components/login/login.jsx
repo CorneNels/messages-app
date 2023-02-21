@@ -28,7 +28,6 @@ const Login = () => {
                 <div className={style.title}>
                     <h2>MESSAGES APP</h2>
                     <h3>Welcome ! Choose a login first</h3>
-                    <p>You're current login id is : {currentLogin}</p>
                 </div>
                 <div className={style.loginForm}>
                     <form onSubmit={handleSubmit}>
@@ -37,6 +36,7 @@ const Login = () => {
                         <button type="submit">LOGIN</button>
                     </form>
                 </div>
+                    <p>You're current login id is : {currentLogin}</p>
             </div>
         </header>
     )

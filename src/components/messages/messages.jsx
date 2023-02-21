@@ -14,12 +14,8 @@ const MessagesRow = ({author, message, date}) => {
 }
 
 
-const Messages = ({categorie, messages}) => {
+const Messages = ({messages}) => {
 
-    const msg = categorie.map(
-        mess => <MessagesRow {...mess} key={mess.id} />
-    )
-    
     const [message, setMessage] = useState([]);
 
     const messageData = messages.map(
@@ -39,7 +35,6 @@ const Messages = ({categorie, messages}) => {
                     <h2>Messages</h2>
                 </div>
                 <table>
-                    <tbody>{msg}</tbody>
                     <tbody>{messageData}</tbody>
                 </table>
             </div>
