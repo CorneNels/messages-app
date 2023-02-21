@@ -17,14 +17,18 @@ const MessagesRow = ({author, message, date}) => {
 const Messages = ({messages}) => {
 
     const [message, setMessage] = useState([]);
+    const [messageList, setMessagesList] = useState([]);
 
     const messageData = messages.map(
-        message => <MessagesRow {...message} key={message.id} />
+        msg => <MessagesRow {...msg} key={msg.id} />
     )
 
 
     const handleSubmitMsg = (e) => {
-
+        e.preventDefault();
+        setMessagesList(messageList => [...messageList, message]); // J'ajoute les valeurs de mon tableau + la dernière
+        console.log(messageList)
+        console.log(messageData)
     }
 
     return(
@@ -35,13 +39,15 @@ const Messages = ({messages}) => {
                     <h2>Messages</h2>
                 </div>
                 <table>
-                    <tbody>{messageData}</tbody>
+                    <tbody>
+                        {messageData}
+                    </tbody>
                 </table>
             </div>
 
             <form onSubmit={handleSubmitMsg}>
-                <input type="text" placeholder="Type your message..." value={message}/>
-                <button type="submit"></button>
+                <input type="text" placeholder="Type your message..." value={message} onChange={(e) => setMessage(e.target.value)}/>
+                <button type="submit">Envoyer</button>
             </form>
 
         </section>

@@ -13,7 +13,7 @@ const CategoriesHead = () => (
 
 const CategoriesRow = ({nom, nb, lastUpdate}) => (
     <tr className={style.space}>
-        <td onClick={<Messages />}>{nom}</td>
+        <td>{nom}</td>
         <td>{nb}</td>
         <td>{lastUpdate}</td>
     </tr>
