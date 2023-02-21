@@ -1,5 +1,14 @@
 import style from "./messages.modules.css"
 
+const MessagesHead = () => (
+    <thead>
+        <tr className={style.space}>
+            <th className={style.under}>Noms :</th>
+            <th className={style.under}>Messages :</th>
+            <th className={style.under}>Last Up :</th>
+        </tr>
+    </thead>
+)
 
 const MessagesRow = ({author, message, date}) => (
     <tr>
@@ -8,7 +17,6 @@ const MessagesRow = ({author, message, date}) => (
         <td>{date}</td>
     </tr>
 )
-
 
 const Messages = ({categorie}) => {
 
