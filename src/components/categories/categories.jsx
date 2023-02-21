@@ -5,14 +5,16 @@ const CategoriesHead = () => (
         <tr>
             <th>Noms :</th>
             <th>Messages :</th>
+            <th>Last Up :</th>
         </tr>
     </thead>
 )
 
-const CategoriesRow = ({nom, messagesNumber}) => (
+const CategoriesRow = ({nom, nb, lastUpdate}) => (
     <tr>
         <td>{nom}</td>
-        <td>{messagesNumber}</td>
+        <td>{nb}</td>
+        <td>{lastUpdate}</td>
     </tr>
 )
 
