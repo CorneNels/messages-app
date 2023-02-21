@@ -11,13 +11,18 @@ const CategoriesHead = () => (
     </thead>
 )
 
-const CategoriesRow = ({nom, nb, lastUpdate}) => (
-    <tr className={style.space}>
-        <td onClick={<Messages />}>{nom}</td>
-        <td>{nb}</td>
-        <td>{lastUpdate}</td>
-    </tr>
-)
+const CategoriesRow = ({name, count, lastUpdate}) => {
+
+    const time = new Date(lastUpdate*1000)
+    return (
+        <tr className={style.space}>
+            <td>{name}</td>
+            <td>{count}</td>
+            <td>{time.toLocaleString()}</td>
+
+        </tr>
+    )
+}
 
 const Categorie = ({data}) => {
 

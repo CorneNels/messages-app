@@ -1,5 +1,7 @@
-import Header from './components/login/login';
+
 import Categorie from './components/categories/categories';
+import Login from './components/login/login';
+import List from './components/ajax/requests';
 
 const cat = [
   {id:1, nom:"Sciences", nb: 22, lastUpdate:12311},
@@ -9,8 +11,14 @@ const cat = [
 ]
 
 function App() {
+  
+  const test = List()
+  
   return (
-    <Categorie data = {cat} />
+    <>
+      <Login/>
+      <Categorie data = {test} />
+    </>
   )
 }
 

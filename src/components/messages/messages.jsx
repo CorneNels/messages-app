@@ -1,3 +1,4 @@
+import { useState } from "react";
 import style from "./messages.modules.css"
 
 const MessagesHead = () => (
@@ -10,30 +11,49 @@ const MessagesHead = () => (
     </thead>
 )
 
-const MessagesRow = ({author, message, date}) => (
-    <tr>
-        <td>{message}</td>
-        <td>{author}</td>
-        <td>{date}</td>
-    </tr>
-)
+const MessagesRow = ({author, message, date}) => {
 
-const Messages = ({categorie}) => {
+    return (
+        <tr>
+            <td>{message}</td>
+            <td>{author}</td>
+            <td>{date}</td>
+        </tr>
+    )
+}
 
-    const msg = categorie.map(
-        mess => <MessagesRow {...mess} key={mess.id} />
+
+const Messages = ({messages}) => {
+
+    const [message, setMessage] = useState([]);
+
+    const messageData = messages.map(
+        message => <MessagesRow {...message} key={message.id} />
     )
 
+
+    const handleSubmitMsg = (e) => {
+
+    }
+
     return(
-        <div>
+        <section>
+
             <div>
-                <h2>Messages</h2>
+                <div>
+                    <h2>Messages</h2>
+                </div>
+                <table>
+                    <tbody>{messageData}</tbody>
+                </table>
             </div>
-            <table>
-                <MessagesHead />
-                <tbody>{msg}</tbody>
-            </table>
-        </div>
+
+            <form onSubmit={handleSubmitMsg}>
+                <input type="text" placeholder="Type your message..." value={message}/>
+                <button type="submit"></button>
+            </form>
+
+        </section>
     )
 }
 

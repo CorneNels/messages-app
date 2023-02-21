@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 const fetchCategory = async () => {
     try {
@@ -11,7 +12,7 @@ const fetchCategory = async () => {
     }     
 }
 
-const list = () => {
+const List = () => {
 
     const [catList, setcatList] = useState([])
 
@@ -19,8 +20,7 @@ const list = () => {
         fetchCategory().then(data => setcatList(data))
     }, [])
 
-    console.log(catList)
+    return(catList)
 }
 
-
-
+export default List

@@ -10,12 +10,14 @@ const Login = () => {
     const [loginId, setLoginId] = useState(" ");
 
     const [loginList, setLoginList] = useState([])
-    const currentLogin = " "
+    const [currentLogin, setCurrentLogin] = useState("")
+    //const currentLogin = " "
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoginList(loginList => [...loginList, loginId]); // J'ajoute les valeurs de mon tableau + la dernière
-        const currentLogin = loginId
+        setCurrentLogin(loginId); // J'ajoute les valeurs de mon tableau + la dernière
+        //const currentLogin = loginId
         console.log("Current id : " + currentLogin)
         console.log(loginList)
     }
@@ -26,7 +28,6 @@ const Login = () => {
                 <div className={style.title}>
                     <h2>MESSAGES APP</h2>
                     <h3>Welcome ! Choose a login first</h3>
-                    <p>You're current login id is : {loginId}</p>
                 </div>
                 <div className={style.loginForm}>
                     <form onSubmit={handleSubmit}>
@@ -35,6 +36,7 @@ const Login = () => {
                         <button type="submit">LOGIN</button>
                     </form>
                 </div>
+                    <p>You're current login id is : {currentLogin}</p>
             </div>
         </header>
     )
