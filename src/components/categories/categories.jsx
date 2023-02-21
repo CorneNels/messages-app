@@ -1,18 +1,19 @@
 import style from "./categories.module.css"
+import Messages from "../messages/messages"
 
 const CategoriesHead = () => (
     <thead>
         <tr className={style.space}>
-            <th>Noms :</th>
-            <th>Messages :</th>
-            <th>Last Up :</th>
+            <th className={style.under}>Noms :</th>
+            <th className={style.under}>Messages :</th>
+            <th className={style.under}>Last Up :</th>
         </tr>
     </thead>
 )
 
 const CategoriesRow = ({nom, nb, lastUpdate}) => (
     <tr className={style.space}>
-        <td>{nom}</td>
+        <td onClick={<Messages />}>{nom}</td>
         <td>{nb}</td>
         <td>{lastUpdate}</td>
     </tr>
