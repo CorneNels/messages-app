@@ -1,5 +1,6 @@
 import style from "./categories.module.css"
 import Messages from "../messages/messages"
+import { useState } from "react"
 
 const CategoriesHead = () => (
     <thead>
