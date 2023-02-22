@@ -47,4 +47,4 @@ Login.defaultProps = {
     currentLogin: PropTypes.string
 }
 
-export default Login;
+export default Login

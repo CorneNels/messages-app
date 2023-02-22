@@ -21,7 +21,6 @@ const MessagesRow = ({author, content, createAt}) => {
     )
 }
 
-
 const Messages = ({messages}) => {
 
     const [message, setMessage] = useState([]);
