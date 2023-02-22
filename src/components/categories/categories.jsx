@@ -11,12 +11,12 @@ const CategoriesHead = () => (
     </thead>
 )
 
-const CategoriesRow = ({name, count, lastUpdate}) => {
+const CategoriesRow = ({name, count, lastUpdate, id}) => {
 
     const time = new Date(lastUpdate*1000)
     return (
         <tr className={style.space}>
-            <td>{name}</td>
+            <td><a onClick={() => console.log(id)}>{name}</a></td>
             <td>{count}</td>
             <td>{time.toLocaleString()}</td>
 

@@ -2,6 +2,7 @@ import List from './components/ajax/requests';
 import Login from './components/login/login';
 import Categorie from './components/categories/categories';
 import Messages from './components/messages/messages';
+import ListMessages from './components/messages/fetchMessages';
 
 const cat = [
   {id:1, nom:"Sciences", nb: 22, lastUpdate:12311},
@@ -14,15 +15,21 @@ const messages =[
   {id: 200, message: "test", author:"clem", date:"22.08.2009"}
 ]
 
+const id = 1
+
 function App() {
   
   const test = List()
+  const listMsg = ListMessages({id})
+
+  console.log(listMsg)
   
   return (
     <>
       <Login/>
       <Categorie data = {test} />
-      <Messages messages = {messages}/>
+      <Messages messages = {listMsg}/>
+
     </>
   )
 }

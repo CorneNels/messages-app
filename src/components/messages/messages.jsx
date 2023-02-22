@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"
 import style from "./messages.modules.css"
 
 const MessagesHead = () => (
@@ -11,13 +11,12 @@ const MessagesHead = () => (
     </thead>
 )
 
-const MessagesRow = ({author, message, date}) => {
-
+const MessagesRow = ({author, content, createAt}) => {
     return (
         <tr>
-            <td>{message}</td>
             <td>{author}</td>
-            <td>{date}</td>
+            <td>{content}</td>
+            <td>{new Date(createAt*1000).toLocaleString()}</td>
         </tr>
     )
 }
@@ -32,7 +31,6 @@ const Messages = ({messages}) => {
         msg => <MessagesRow {...msg} key={msg.id} />
     )
 
-
     const handleSubmitMsg = (e) => {
         e.preventDefault();
         setMessagesList(messageList => [...messageList, message]); // J'ajoute les valeurs de mon tableau + la dernière
@@ -42,12 +40,12 @@ const Messages = ({messages}) => {
 
     return(
         <section>
-
             <div>
                 <div>
                     <h2>Messages</h2>
                 </div>
                 <table>
+                    <MessagesHead />
                     <tbody>
                         {messageData}
                     </tbody>
@@ -58,7 +56,6 @@ const Messages = ({messages}) => {
                 <input type="text" placeholder="Type your message..." value={message} onChange={(e) => setMessage(e.target.value)}/>
                 <button type="submit">Envoyer</button>
             </form>
-
         </section>
     )
 }
