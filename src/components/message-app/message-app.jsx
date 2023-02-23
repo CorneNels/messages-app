@@ -8,21 +8,20 @@ import style from "./message-app.module.css"
 const MessagesApp = () => {
 
     const listCat = ListCat()
+
     const [user, setUser] = useState(null)
     const [idCat, setIdCat] = useState('')
 
     return(
         <>
             {!user && 
-            <Login 
-            user = {user}
+            <Login
             setUser = {setUser}/> 
             || <div className={style.displayLogin}>Your current login is : <p>{user}</p></div>}
-
-            {!idCat && user && <Categorie
+            
+            {user && !idCat && <Categorie
             data = {listCat}
-            setIdCat = {setIdCat}
-            idCat = {idCat} />}
+            setIdCat = {setIdCat}/>}
 
             {idCat && <Messages id = {idCat}/>}
         </>

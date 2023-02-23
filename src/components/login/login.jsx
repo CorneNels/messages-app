@@ -2,24 +2,17 @@ import PropTypes, { string } from 'prop-types';
 import { useId, useState } from "react"
 import style from "./login.module.css"
 
-
-
-const Login = ({user, setUser}) => {
+const Login = ({setUser}) => {
 
     const id = useId();
     const [loginId, setLoginId] = useState(" ");
-
     const [loginList, setLoginList] = useState([])
     const [currentLogin, setCurrentLogin] = useState("")
-    //const currentLogin = " "
 
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoginList(loginList => [...loginList, loginId]); // J'ajoute les valeurs de mon tableau + la dernière
         setCurrentLogin(loginId); // J'ajoute les valeurs de mon tableau + la dernière
-        //const currentLogin = loginId
-        console.log("Current id : " + currentLogin)
-        console.log(loginList)
         setUser(loginId)
     }
 
