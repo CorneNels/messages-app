@@ -4,11 +4,15 @@ import ListMessages from "./fetchMessages"
 
 const MessagesRow = ({author, content, createAt}) => {
     return (
-        <tr>
-            <td>{author}</td>
-            <td>{content}</td>
-            <td>{new Date(createAt*1000).toLocaleString()}</td>
-        </tr>
+        <>
+        <p className={style.author}>{author}</p>
+        <div className="messageBubble">
+            <div className="messageDate">
+                <p>{content}</p>
+                <span>{new Date(createAt*1000).toLocaleString()}</span>
+            </div>
+        </div>
+        </>
     )
 }
 
@@ -32,11 +36,9 @@ const Messages = ({id}) => {
                 <div>
                     <h2>Messages</h2>
                 </div>
-                <table>
-                    <tbody>
-                        {messageData}
-                    </tbody>
-                </table>
+                <div className="messageList">
+                    {messageData}
+                </div>
             </div>
             <form onSubmit={handleSubmitMsg}>
                 <input type="text" placeholder="Type your message..." value={message} onChange={(e) => setMessage(e.target.value)}/>

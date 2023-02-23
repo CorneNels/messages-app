@@ -30,7 +30,6 @@ const Login = ({setUser}) => {
                         <button type="submit">LOGIN</button>
                     </form>
                 </div>
-                    <p>You're current login id is : {currentLogin}</p>
             </div>
         </header>
     )

@@ -10,6 +10,31 @@ section h2{
     font-size: 2rem;
 }
 
+section .author{
+    color: chocolate;
+}
+
+section .messageBubble{
+    background: chocolate;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 15px -2px #0000001c;
+    color: whitesmoke;
+}
+
+section .messageDate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+section .messageDate span{
+    font-size: 14px;
+}
+
+/* 
 section table{
     text-align: left;
     border-spacing: 0;
@@ -32,23 +57,11 @@ section tbody tr{
     border-radius: 3rem;
     box-shadow: 0 0 15px -2px #0000001c;
     color: whitesmoke;
-}
+} */
 
 section form{
     width: 100%;
 }
-
-/* 
-table tbody tr{
-    background-color: chocolate;
-    color: white;
-    padding: 1rem;
-}
-
-table tbody tr th{
-    padding: 1rem;
-} */
-
 
 form{
     margin-top: 2rem;
