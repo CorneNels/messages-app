@@ -3,6 +3,7 @@ import Login from '../login/login'
 import Categorie from '../categories/categories'
 import Messages from '../messages/messages'
 import ListMessages from '../messages/fetchMessages'
+import {useState} from 'react'
 
 const MessagesApp = () => {
 
@@ -10,11 +11,24 @@ const MessagesApp = () => {
     const listCat = ListCat()
     const listMsg = ListMessages({id})
 
+    const [user, setUser] = useState(null)
+    const [idCat, setIdCat] = useState(null)
+
     return(
         <>
-            <Login />
-            <Categorie data = {listCat} />
-            <Messages messages = {listMsg}/>
+            {!user && 
+            <Login 
+            user = {user}
+            setUser = {setUser}/> 
+            || <div>Login is : {user}</div>}
+
+            <Categorie
+            data = {listCat}
+            setIdCat = {setIdCat}
+            idCat = {idCat} />
+
+            {idCat && <Messages messages = {listMsg}/>}
+            
         </>
     )
 }

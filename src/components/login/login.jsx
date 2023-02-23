@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import { useId, useState } from "react"
 import style from "./login.module.css"
 
 
-const Login = () => {
+
+const Login = ({user, setUser}) => {
 
     const id = useId();
     const [loginId, setLoginId] = useState(" ");
@@ -19,6 +20,7 @@ const Login = () => {
         //const currentLogin = loginId
         console.log("Current id : " + currentLogin)
         console.log(loginList)
+        setUser(loginId)
     }
 
     return (
@@ -35,7 +37,7 @@ const Login = () => {
                         <button type="submit">LOGIN</button>
                     </form>
                 </div>
-                <div className={style.displayLogin}>You're current login id is :<p>{currentLogin}</p></div>
+                    <p>You're current login id is : {currentLogin}</p>
             </div>
         </header>
     )
