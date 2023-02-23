@@ -7,21 +7,20 @@ import {useState} from 'react'
 const MessagesApp = () => {
 
     const listCat = ListCat()
+
     const [user, setUser] = useState(null)
     const [idCat, setIdCat] = useState('')
 
     return(
         <>
             {!user && 
-            <Login 
-            user = {user}
+            <Login
             setUser = {setUser}/> 
             || <div>Login is : {user}</div>}
 
-            {!idCat && <Categorie
+            {user && !idCat && <Categorie
             data = {listCat}
-            setIdCat = {setIdCat}
-            idCat = {idCat} />}
+            setIdCat = {setIdCat}/>}
 
             {idCat && <Messages id = {idCat}/>}
         </>

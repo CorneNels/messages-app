@@ -8,7 +8,7 @@ const fetchMessages = async (id) => {
         const messages = dataMSG.data
         return messages
     } catch (error) {
-        console.log(error);
+        console.log(error)
     }     
 }
 

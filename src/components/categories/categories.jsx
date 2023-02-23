@@ -11,15 +11,12 @@ const CategoriesHead = () => (
 )
 
 const CategoriesRow = ({name, count, lastUpdate, id, setIdCat}) => {
-
     const time = new Date(lastUpdate*1000)
-
     return (
         <tr className={style.space}>
             <td onClick={() => setIdCat(id)}>{name}</td>
             <td>{count}</td>
             <td>{time.toLocaleString()}</td>
-
         </tr>
     )
 }
