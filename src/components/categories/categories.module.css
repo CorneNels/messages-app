@@ -1,31 +1,40 @@
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    box-shadow: 0 0 15px -2px #0000001c;
+    width: fit-content;
+    margin: auto;
+    border-radius: 1rem;
 }
 
 .title{
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
+    border-bottom: none;
+    text-align: center;
     width: 500px;
-    display: flex;
     color: whitesmoke;
-    background-color: purple;
+    background-color: chocolate;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.title h2{
+    color: antiquewhite;
+    text-transform: uppercase;
+    font-weight: 100;
 }
 
 .table{
-    border: 1px solid black;
     width: 500px;
     line-height: 25px;
+    padding: 1.5rem;
 }
 
 .space{
     text-align: left;
-    border: 1px solid black;
 }
 
 .under{
     text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: chocolate;
 }

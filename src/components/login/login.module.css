@@ -1,5 +1,58 @@
-.container{
+header{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+
+.container{
+    width: fit-content;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 0 #0000001c;
+    padding: 2rem 10rem;
+    margin: 3rem 0;
+}
+
+h2{
+    color: chocolate;
+    font-weight: 400;
+}
+
+h3{
+    font-weight: 100;
+}
+
+form input{
+    padding: 0.7rem 1rem;
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+    box-shadow: 0 0 15px -2px #0000001c;
+}
+
+form button{
+    padding: 0.7rem 1rem;
+    border-radius: 0 1rem 1rem 0;
+    border: none;
+    box-shadow: 0 0 15px -2px #0000001c;
+    background-color: chocolate;
+    color: antiquewhite;
+    cursor: pointer;
+    transition: 1s;
+}
+
+form button:hover{
+    background-color: rgb(255, 130, 41);
+}
+
+.displayLogin{
+    margin-top: 2rem;
     
+}
+
+.displayLogin p{
+    color: chocolate;
+    font-weight: 500;
+    margin-top: 0rem;
+    /*border: 1px solid chocolate;*/
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
 }

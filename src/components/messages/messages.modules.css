@@ -1,0 +1,55 @@
+section{
+    padding: 5rem;
+    background-color: rgb(253, 209, 177);
+    margin-top: 3rem;
+}
+
+section h2{
+    color: chocolate;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+table{
+    text-align: left;
+    border-spacing: 0;
+}
+
+table tr td, table tr th{
+    padding: 0.5rem 1rem;
+}
+
+table tr th{
+    color: chocolate;
+    text-transform: uppercase;
+}
+
+tbody tr{
+    display: block;
+    background: chocolate;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 15px -2px #0000001c;
+    color: whitesmoke;
+}
+
+form{
+    width: 100%;
+}
+
+/* 
+table tbody tr{
+    background-color: chocolate;
+    color: white;
+    padding: 1rem;
+}
+
+table tbody tr th{
+    padding: 1rem;
+} */
+
+
+form{
+    margin-top: 2rem;
+}

@@ -44,7 +44,7 @@ const Messages = ({messages}) => {
                     <h2>Messages</h2>
                 </div>
                 <table>
-                    <MessagesHead />
+                    {/* <MessagesHead /> */}
                     <tbody>
                         {messageData}
                     </tbody>

@@ -33,9 +33,9 @@ const Categorie = ({data}) => {
 
     return(
         <div className={style.container}>
-        <div className={style.title}>
-            <h2>Liste des catégories</h2>
-        </div>
+            <div className={style.title}>
+                <h2>Liste des catégories</h2>
+            </div>
             <table className={style.table}>
                 <CategoriesHead />
                 <tbody>
