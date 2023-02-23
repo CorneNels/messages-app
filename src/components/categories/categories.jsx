@@ -16,8 +16,8 @@ const CategoriesRow = ({name, count, lastUpdate, id, setIdCat}) => {
 
     return (
         <tr className={style.space}>
-            <td onClick={() => setIdCat(id)}>{name}</td>
-            <td>{count}</td>
+            <td onClick={() => setIdCat(id)}><div className={style.btnCat}>{name}</div></td>
+            <td className={style.countTd}>{count} message(s)</td>
             <td>{time.toLocaleString()}</td>
 
         </tr>

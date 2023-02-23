@@ -26,7 +26,10 @@
     width: 500px;
     line-height: 25px;
     padding: 1.5rem;
+    text-align: left;
+    border-spacing: 20px 10px!important;
 }
+
 
 .space{
     text-align: left;
@@ -37,4 +40,28 @@
     text-transform: uppercase;
     font-weight: 500;
     color: chocolate;
+}
+
+.btnCat{
+    padding: 0.4rem 0.3rem;
+    background-color: rgb(245, 245, 245);   
+    text-align: center;
+    border-radius: 1rem;
+    color: chocolate;
+    font-weight: 600;
+    transition: 0.8s;
+    padding-left: 0;
+}
+
+.btnCat:hover{
+    background-color: rgb(219, 219, 219);;
+    cursor: pointer;
+}
+
+td:first-child{
+    padding-left: 0;
+}
+
+td{
+    padding-left: 0.5rem;
 }

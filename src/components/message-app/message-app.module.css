@@ -1,0 +1,15 @@
+.displayLogin{
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.displayLogin p{
+    color: chocolate;
+    font-weight: 500;
+    margin-top: 0rem;
+    /*border: 1px solid chocolate;*/
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+}

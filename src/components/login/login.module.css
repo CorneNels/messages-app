@@ -1,6 +1,8 @@
 header{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container{
@@ -41,18 +43,4 @@ form button{
 
 form button:hover{
     background-color: rgb(255, 130, 41);
-}
-
-.displayLogin{
-    margin-top: 2rem;
-    
-}
-
-.displayLogin p{
-    color: chocolate;
-    font-weight: 500;
-    margin-top: 0rem;
-    /*border: 1px solid chocolate;*/
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
 }

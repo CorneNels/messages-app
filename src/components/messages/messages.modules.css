@@ -1,6 +1,6 @@
 section{
     padding: 5rem;
-    background-color: rgb(253, 209, 177);
+    background-color:rgb(255 240 229);
     margin-top: 3rem;
 }
 
@@ -15,7 +15,7 @@ section table{
     border-spacing: 0;
 }
 
-section table tr td, table tr th{
+section table tr td, section table tr th{
     padding: 0.5rem 1rem;
 }
 
