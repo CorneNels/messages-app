@@ -12,7 +12,7 @@ const fetchCategory = async () => {
     }     
 }
 
-const List = () => {
+const ListCat = () => {
 
     const [catList, setcatList] = useState([])
 
@@ -23,4 +23,4 @@ const List = () => {
     return(catList)
 }
 
-export default List
+export default ListCat
