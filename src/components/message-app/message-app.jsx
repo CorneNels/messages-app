@@ -11,6 +11,8 @@ const MessagesApp = () => {
     const listCat = ListCat()
     const listMsg = ListMessages({id})
 
+
+    
     const [user, setUser] = useState(null)
     const [idCat, setIdCat] = useState(null)
 
@@ -22,12 +24,12 @@ const MessagesApp = () => {
             setUser = {setUser}/> 
             || <div>Login is : {user}</div>}
 
-            <Categorie
+            {!idCat && <Categorie
             data = {listCat}
             setIdCat = {setIdCat}
-            idCat = {idCat} />
+            idCat = {idCat} />}
 
-            {idCat && <Messages messages = {listMsg}/>}
+            {idCat && <Messages messages = {ListMessages({idCat})}/>}
             
         </>
     )

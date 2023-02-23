@@ -10,12 +10,13 @@ const CategoriesHead = () => (
     </thead>
 )
 
-const CategoriesRow = ({name, count, lastUpdate, id}, setIdCat, idCat) => {
+const CategoriesRow = ({name, count, lastUpdate, id}) => {
 
     const time = new Date(lastUpdate*1000)
+
     return (
         <tr className={style.space}>
-            <td onClick={() => setIdCat(id)}>{name}</td>
+            <td onClick={() => console.log(id)}>{name}</td>
             <td>{count}</td>
             <td>{time.toLocaleString()}</td>
 
@@ -23,10 +24,10 @@ const CategoriesRow = ({name, count, lastUpdate, id}, setIdCat, idCat) => {
     )
 }
 
-const Categorie = ({data, setIdCat, idCat}) => {
+const Categorie = ({data}) => {
 
     const category = data.map(
-        list_cat => <CategoriesRow {...list_cat} key={list_cat.id} setIdCat={setIdCat}/>
+        list_cat => <CategoriesRow {...list_cat} key={list_cat.id}/>
     )
 
     return(
@@ -43,7 +44,5 @@ const Categorie = ({data, setIdCat, idCat}) => {
         </div>
     )
 }
-
-
 
 export default Categorie
