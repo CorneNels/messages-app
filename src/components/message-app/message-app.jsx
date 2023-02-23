@@ -1,4 +1,4 @@
-import List from '../ajax/requests'
+import ListCat from '../ajax/requests'
 import Login from '../login/login'
 import Categorie from '../categories/categories'
 import Messages from '../messages/messages'
@@ -6,12 +6,12 @@ import ListMessages from '../messages/fetchMessages'
 
 const MessagesApp = () => {
 
-    const id = 1
+    const id = 2
 
     return(
         <>
         <Login />
-        <Categorie data = {List()} />
+        <Categorie data = {ListCat()} />
         <Messages messages = {ListMessages({id})}/>
         </>
     )
