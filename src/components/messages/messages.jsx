@@ -1,5 +1,6 @@
 import { useState } from "react"
 import style from "./messages.modules.css"
+import ListMessages from "./fetchMessages"
 
 const MessagesHead = () => (
     <thead>
@@ -21,10 +22,12 @@ const MessagesRow = ({author, content, createAt}) => {
     )
 }
 
-const Messages = ({messages}) => {
+const Messages = ({id}) => {
 
     const [message, setMessage] = useState([]);
     const [messageList, setMessagesList] = useState([]);
+
+    const messages = ListMessages({id})
 
     const messageData = messages.map(
         msg => <MessagesRow {...msg} key={msg.id} />
