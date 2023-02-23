@@ -6,13 +6,15 @@ import ListMessages from '../messages/fetchMessages'
 
 const MessagesApp = () => {
 
-    const id = 2
+    const id = 1
+    const listCat = ListCat()
+    const listMsg = ListMessages({id})
 
     return(
         <>
-        <Login />
-        <Categorie data = {ListCat()} />
-        <Messages messages = {ListMessages({id})}/>
+            <Login />
+            <Categorie data = {listCat} />
+            <Messages messages = {listMsg}/>
         </>
     )
 }
