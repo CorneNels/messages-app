@@ -10,21 +10,21 @@ section h2{
     font-size: 2rem;
 }
 
-table{
+section table{
     text-align: left;
     border-spacing: 0;
 }
 
-table tr td, table tr th{
+section table tr td, table tr th{
     padding: 0.5rem 1rem;
 }
 
-table tr th{
+section table tr th{
     color: chocolate;
     text-transform: uppercase;
 }
 
-tbody tr{
+section tbody tr{
     display: block;
     background: chocolate;
     margin: 1rem 0;
@@ -34,7 +34,7 @@ tbody tr{
     color: whitesmoke;
 }
 
-form{
+section form{
     width: 100%;
 }
 
