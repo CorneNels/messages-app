@@ -23,7 +23,7 @@ const MessagesApp = () => {
             data = {listCat}
             setIdCat = {setIdCat}/>}
 
-            {idCat && <Messages id = {idCat}/>}
+            {idCat && <Messages id = {idCat} user = {user}/>}
         </>
     )
 }

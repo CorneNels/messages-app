@@ -1,4 +1,4 @@
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { useId, useState } from "react"
 import style from "./login.module.css"
 

@@ -3,13 +3,7 @@ import { useState, useEffect } from "react"
 
 
 const fetchMessages = async (id) => {
-    try {
-        const dataMSG = await axios.get("http://localhost:8080/api/subject/"+id+"/message")
-        const messages = dataMSG.data
-        return messages
-    } catch (error) {
-        console.log(error)
-    }     
+        return (await axios.get("http://localhost:8080/api/subject/"+id+"/message")).data
 }
 
 const ListMessages = ({id}) => {

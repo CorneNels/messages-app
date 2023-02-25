@@ -1,19 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-
 const fetchCategory = async () => {
-    try {
-        const data = await axios.get("http://localhost:8080/api/subject/category")
-        const catList = data.data
-        return catList
-    } catch (error) {
-        console.log(error);
-    }     
+        return (await axios.get("http://localhost:8080/api/subject/category")).data
 }
 
 const ListCat = () => {
-
     const [catList, setcatList] = useState([])
 
     useEffect(() => {
@@ -22,5 +14,9 @@ const ListCat = () => {
 
     return(catList)
 }
+
+export const sendNewMessage = ((categoryId, data) => {
+    return axios.post('http://localhost:8080/api/subject/' + categoryId + '/message', data)
+})
 
 export default ListCat

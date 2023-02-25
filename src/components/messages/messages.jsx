@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import style from "./messages.modules.css"
-import ListMessages from "./fetchMessages"
+import ListMessages from "../ajax/fetchMessages"
+import { sendNewMessage } from "../ajax/requests"
 
 const MessagesRow = ({author, content, createAt}) => {
     return (
@@ -16,9 +17,10 @@ const MessagesRow = ({author, content, createAt}) => {
     )
 }
 
-const Messages = ({id}) => {
+const Messages = ({id, user}) => {
 
-    const [message, setMessage] = useState([])
+    const [message, setMessage] = useState('')
+    const [update, setUpdate] = useState('')
     const messages = ListMessages({id})
 
     const messageData = messages.map(
@@ -27,7 +29,14 @@ const Messages = ({id}) => {
 
     const handleSubmitMsg = (e) => {
         e.preventDefault()
-        //ajout à gérer
+
+        const newMessage = {
+            author: user,
+            content: message,
+            createAt: new Date(5765757876*1000).toLocaleString()
+        }
+
+        sendNewMessage(id, newMessage).then(() => setUpdate(new Date()))
     }
 
     return(
